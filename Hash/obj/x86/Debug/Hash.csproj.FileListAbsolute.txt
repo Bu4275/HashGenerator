@@ -32,3 +32,11 @@ C:\Users\Bubu\Desktop\Application\HashGenerator - 150127\Hash\obj\x86\Debug\Hash
 C:\Users\Bubu\Desktop\Application\HashGenerator - 150127\Hash\obj\x86\Debug\Hash.Form1.resources
 C:\Users\Bubu\Desktop\Application\HashGenerator - 150127\Hash\obj\x86\Debug\HashGenerator.Properties.Resources.resources
 C:\Users\Bubu\Desktop\Application\HashGenerator - 150127\Hash\obj\x86\Debug\Hash.csproj.GenerateResource.Cache
+C:\Users\Bubu\Desktop\Application\GitHub\HashGenerator\Hash\obj\x86\Debug\HashGenerator.exe
+C:\Users\Bubu\Desktop\Application\GitHub\HashGenerator\Hash\obj\x86\Debug\HashGenerator.pdb
+C:\Users\Bubu\Desktop\Application\GitHub\HashGenerator\Hash\bin\Debug\HashGenerator.exe
+C:\Users\Bubu\Desktop\Application\GitHub\HashGenerator\Hash\bin\Debug\HashGenerator.pdb
+C:\Users\Bubu\Desktop\Application\GitHub\HashGenerator\Hash\obj\x86\Debug\Hash.csprojResolveAssemblyReference.cache
+C:\Users\Bubu\Desktop\Application\GitHub\HashGenerator\Hash\obj\x86\Debug\Hash.Form1.resources
+C:\Users\Bubu\Desktop\Application\GitHub\HashGenerator\Hash\obj\x86\Debug\HashGenerator.Properties.Resources.resources
+C:\Users\Bubu\Desktop\Application\GitHub\HashGenerator\Hash\obj\x86\Debug\Hash.csproj.GenerateResource.Cache

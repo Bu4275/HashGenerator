@@ -160,7 +160,7 @@ namespace Hash
             {
                 do
                 {
-                    buffer = new byte[4096];
+                    buffer = new byte[4098];
                     bytesRead = input.Read(buffer, 0, buffer.Length);
                     totalBytesRead += bytesRead;
                     md5.TransformBlock(buffer, 0, bytesRead, null, 0);
@@ -191,16 +191,32 @@ namespace Hash
         }
         public string CalculateHashSHA1(Stream input)
         {
+            byte[] buffer;
+            int bytesRead;
+            long size = input.Length;
+            long totalBytesRead = 0;
             // step 1, calculate MD5 hash from input
-            SHA1 sha1 = SHA1.Create();
-            byte[] hash = sha1.ComputeHash(input);
-            // step 2, convert byte array to hex string
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < hash.Length; i++)
+            using (SHA1 hasher = SHA1.Create())
             {
-                sb.Append(hash[i].ToString("X2"));
+                do
+                {
+                    buffer = new byte[4098];
+                    bytesRead = input.Read(buffer, 0, buffer.Length);
+                    totalBytesRead += bytesRead;
+                    hasher.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                    this.Invoke(
+                        new Action(() =>
+                        {
+                            progressBar1.Value = Convert.ToInt32((double)totalBytesRead / size * 100);
+                        }));
+
+
+                } while (bytesRead != 0);
+
+                hasher.TransformFinalBlock(buffer, 0, 0);
+                return BytesToString(hasher.Hash);
             }
-            return sb.ToString();
         }
 
         // Other
