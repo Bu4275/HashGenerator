@@ -237,7 +237,9 @@ namespace Hash
             return sb.ToString();
         }
 
-        private void fileNameTB_DragEnter(object sender, DragEventArgs e)
+
+
+        private void Form1_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop, false))
                 e.Effect = DragDropEffects.Copy;
@@ -245,9 +247,7 @@ namespace Hash
                 e.Effect = DragDropEffects.None;
         }
 
-
-
-        private void fileNameTB_DragDrop(object sender, DragEventArgs e)
+        private void Form1_DragDrop(object sender, DragEventArgs e)
         {
             string[] fileInfo = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             string filepath = string.Join("", fileInfo, 0, fileInfo.Length);

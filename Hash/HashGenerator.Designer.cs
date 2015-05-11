@@ -85,15 +85,12 @@
             // 
             // fileNameTB
             // 
-            this.fileNameTB.AllowDrop = true;
             this.fileNameTB.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.fileNameTB.Location = new System.Drawing.Point(124, 22);
             this.fileNameTB.Name = "fileNameTB";
             this.fileNameTB.ReadOnly = true;
             this.fileNameTB.Size = new System.Drawing.Size(386, 23);
             this.fileNameTB.TabIndex = 42;
-            this.fileNameTB.DragDrop += new System.Windows.Forms.DragEventHandler(this.fileNameTB_DragDrop);
-            this.fileNameTB.DragEnter += new System.Windows.Forms.DragEventHandler(this.fileNameTB_DragEnter);
             // 
             // labelOk
             // 
@@ -349,6 +346,7 @@
             // 
             // Form1
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 514);
@@ -358,6 +356,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.Text = "Hash Generator By Bubu";
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form1_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form1_DragEnter);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
